@@ -581,19 +581,18 @@ ul { list-style: none; }
   color: var(--accent);
   position: relative;
   cursor: default;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline;
   vertical-align: baseline;
   transition: color 0.3s ease, filter 0.3s ease;
 }
 .tensor-glyph {
-  width: 0.52em;
-  height: 0.52em;
-  display: block;
+  width: 0.18em;
+  height: 0.18em;
+  display: inline-block;
+  vertical-align: baseline;
   margin: 0 0.02em;
   position: relative;
-  top: -0.04em;
+  bottom: 0.12em;
   filter: drop-shadow(0 0 0px transparent);
   transition: filter 0.3s ease;
 }

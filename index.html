@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="geometry">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEEQ.WORK — Up-leveling work. Down-regulating anxiety.</title>
+  <meta name="description" content="AI + Emotional Intelligence consulting for high-performing Human-AI Teams. PEEQ.WORK integrates mindfulness, resilience, and practical AI tools." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav id="nav" class="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-peeq">PEEQ</span><span class="nav__logo-dot">.</span><span class="nav__logo-work">WORK</span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#vision" class="nav__link" data-section="vision">Vision</a></li>
+        <li><a href="#programs" class="nav__link" data-section="programs">Programs</a></li>
+        <li><a href="#pathways" class="nav__link" data-section="pathways">Pathways</a></li>
+        <li><a href="#about" class="nav__link" data-section="about">About</a></li>
+        <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__right">
+        <div class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Switch theme">
+          <button class="theme-dot theme-dot--geometry" id="dotGeometry" aria-label="Geometry theme (day)"></button>
+          <button class="theme-dot theme-dot--ocean" id="dotOcean" aria-label="Ocean theme (night)"></button>
+        </div>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Close menu">✕</button>
+    <ul class="mobile-menu__links">
+      <li><a href="#vision" class="mobile-menu__link">Vision</a></li>
+      <li><a href="#programs" class="mobile-menu__link">Programs</a></li>
+      <li><a href="#pathways" class="mobile-menu__link">Pathways</a></li>
+      <li><a href="#about" class="mobile-menu__link">About</a></li>
+      <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+    </ul>
+    <div class="mobile-menu__theme">
+      <span class="mobile-menu__theme-label">Theme</span>
+      <div class="theme-toggle theme-toggle--large">
+        <button class="theme-dot theme-dot--geometry" data-mirror="geometry" aria-label="Geometry theme"></button>
+        <button class="theme-dot theme-dot--ocean" data-mirror="ocean" aria-label="Ocean theme"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 1: HERO
+  ═══════════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <!-- Geometry orbs (day) -->
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="hero__orb hero__orb--4"></div>
+      <!-- Grid overlay -->
+      <div class="hero__grid"></div>
+    </div>
+
+    <div class="hero__content container">
+      <div class="hero__eyebrow">
+        <span class="mono-tag">AI + Emotional Intelligence</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-line1">PEEQ</span><span class="hero__title-dot" id="heroDot"><svg class="tensor-glyph" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.2" fill="none"/><line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <!-- Tensor tooltip (appears after 3s hover on dot) -->
+          <div class="tensor-tooltip" id="tensorTooltip">
+            <div class="tensor-tooltip__icon">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <p class="tensor-tooltip__label mono-tag">Tensor →</p>
+            <h3 class="tensor-tooltip__title">Co-creation</h3>
+            <p class="tensor-tooltip__desc">Parallel work, combined capacity — not 1+1 but 1⊗1: a richer object than either alone</p>
+          </div>
+        </span><span class="hero__title-line2">WORK</span>
+      </h1>
+      <div class="hero__trigger-zone" id="heroTriggerZone">
+        <p class="hero__tagline"><span class="hero__tagline-up">Up-leveling work.</span><br class="desktop-br"> Down-regulating anxiety.</p>
+      </div>
+      <p class="hero__sub" id="heroSub">Integrating AI <span class="hero__sub-punct">+</span> EQ for High<span class="hero__sub-punct">-</span>Performing Human<span class="hero__sub-punct">-</span>AI Teams</p>
+      <div class="hero__cta-group">
+        <a href="#vision" class="btn btn--primary">Explore Our Approach</a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span class="hero__scroll-text mono-tag">scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 2: VISION
+  ═══════════════════════════════════════════════ -->
+  <section id="vision" class="section section--alt philosophy">
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="mono-tag section__eyebrow">Our Vision</span>
+        <h2 class="section__title"><span class="title-line-1">When the Future Demands</span> <span class="title-line-2">a New Kind of Work</span></h2>
+        <p class="philosophy__statement">
+          We believe AI can be of service to society and a catalyst for transforming how we work together across business, public service, and research. We're here to make that transition work for you.
+        </p>
+      </div>
+
+      <div class="philosophy__cards">
+        <div class="philosophy__card reveal-up" style="--delay: 0ms">
+          <div class="philosophy__card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 16l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="philosophy__card-title">Build Confidence</h3>
+          <p class="philosophy__card-text">Demystify AI and reduce adoption anxiety. We help you move from uncertainty to agency — at your own pace.</p>
+        </div>
+
+        <div class="philosophy__card reveal-up" style="--delay: 100ms">
+          <div class="philosophy__card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 20c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="16" cy="11" r="3" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="8" cy="24" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="24" cy="24" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="philosophy__card-title">Empower Teams</h3>
+          <p class="philosophy__card-text">Develop Human-AI Teams (HATS) that combine human expertise with AI capabilities — because the best work happens together.</p>
+        </div>
+
+        <div class="philosophy__card reveal-up" style="--delay: 200ms">
+          <div class="philosophy__card-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M16 6v20M6 16h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 10l12 12M22 10L10 22" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3 class="philosophy__card-title">Drive Impact</h3>
+          <p class="philosophy__card-text">Turn pilot projects and capstone initiatives into scalable, ethical AI practices — with outcomes you can measure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 3: FUTURE OF WORK
+  ═══════════════════════════════════════════════ -->
+  <section id="future" class="section vision">
+    <div class="container">
+      <div class="vision__layout">
+        <div class="vision__header reveal-up">
+          <span class="mono-tag section__eyebrow">Looking Ahead</span>
+          <h2 class="section__title">The Future of Work</h2>
+          <p class="vision__statement">
+            The future of work requires a balanced approach that combines human judgment, emotional intelligence, and AI tools.
+          </p>
+        </div>
+
+        <ul class="vision__list">
+          <li class="vision__item reveal-up" style="--delay: 0ms">
+            <span class="vision__item-marker" aria-hidden="true">—</span>
+            <span class="vision__item-text">Developing emotional intelligence skills that complement AI capabilities</span>
+          </li>
+          <li class="vision__item reveal-up" style="--delay: 100ms">
+            <span class="vision__item-marker" aria-hidden="true">—</span>
+            <span class="vision__item-text">Building psychological safety in teams working with AI systems</span>
+          </li>
+          <li class="vision__item reveal-up" style="--delay: 200ms">
+            <span class="vision__item-marker" aria-hidden="true">—</span>
+            <span class="vision__item-text">Creating frameworks for effective human-AI collaboration</span>
+          </li>
+          <li class="vision__item reveal-up" style="--delay: 300ms">
+            <span class="vision__item-marker" aria-hidden="true">—</span>
+            <span class="vision__item-text">Reducing anxiety and building trust in AI adoption</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 4: WHO WE SERVE
+  ═══════════════════════════════════════════════ -->
+  <section id="audience" class="section section--alt audience">
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="mono-tag section__eyebrow">Who We Serve</span>
+        <h2 class="section__title">Built For</h2>
+        <p class="section__subtitle">PEEQ.WORK meets you where you are.</p>
+      </div>
+
+      <div class="audience__grid">
+        <div class="audience-card reveal-up" style="--delay: 0ms">
+          <div class="audience-card__icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect x="4" y="10" width="32" height="22" rx="3" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M14 10V8a2 2 0 012-2h8a2 2 0 012 2v2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M20 21v-4M17 19h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="audience-card__title">Institutions</h3>
+          <p class="audience-card__text">From startups to enterprises integrating AI while maintaining team cohesion, culture, and human connection.</p>
+        </div>
+
+        <div class="audience-card reveal-up" style="--delay: 150ms">
+          <div class="audience-card__icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="14" r="5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="8" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="32" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M13 32c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M2 36c0-2.761 2.686-5 6-5M38 36c0-2.761-2.686-5-6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3 class="audience-card__title">Teams</h3>
+          <p class="audience-card__text">Working groups that need to collaborate effectively with AI tools — building shared understanding, trust, and new ways of working.</p>
+        </div>
+
+        <div class="audience-card reveal-up" style="--delay: 300ms">
+          <div class="audience-card__icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="16" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M26 9l2-3M14 9l-2-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="audience-card__title">Individuals</h3>
+          <p class="audience-card__text">Professionals seeking to thrive alongside AI — building confidence, reducing anxiety, and developing new capabilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 5: PROGRAMS
+  ═══════════════════════════════════════════════ -->
+  <section id="programs" class="section services">
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="mono-tag section__eyebrow">What We Do</span>
+        <h2 class="section__title">Programs</h2>
+        <p class="section__subtitle">Practical, human-centered approaches to AI integration.</p>
+      </div>
+
+      <div class="services__grid">
+        <div class="service-card reveal-up" style="--delay: 0ms">
+          <div class="service-card__num mono-tag">01</div>
+          <h3 class="service-card__title">PEEQ Program</h3>
+          <p class="service-card__label mono-tag">Practice &amp; Experience in EQ</p>
+          <p class="service-card__text">Mindfulness, resilience, team cohesion, conflict resolution, and psychological safety — the emotional foundation for AI-ready organizations.</p>
+          <ul class="service-card__tags">
+            <li>Mindfulness</li>
+            <li>Resilience</li>
+            <li>Psychological Safety</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal-up" style="--delay: 100ms">
+          <div class="service-card__num mono-tag">02</div>
+          <h3 class="service-card__title">HATS Program</h3>
+          <p class="service-card__label mono-tag">Human-AI Teams</p>
+          <p class="service-card__text">AI transparency, shared cognition, ethical deployment, and reducing anxiety — frameworks for humans and AI to work as genuine partners.</p>
+          <ul class="service-card__tags">
+            <li>Shared Cognition</li>
+            <li>Ethical AI</li>
+            <li>Transparency</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal-up" style="--delay: 200ms">
+          <div class="service-card__num mono-tag">03</div>
+          <h3 class="service-card__title">Workshops &amp; Training</h3>
+          <p class="service-card__label mono-tag">Learning Experiences</p>
+          <p class="service-card__text">AI+EQ integration workshops, leadership in the AI age, and team-building programs for organizations at every stage of AI adoption.</p>
+          <ul class="service-card__tags">
+            <li>AI + EQ</li>
+            <li>Leadership</li>
+            <li>Team-Building</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal-up" style="--delay: 300ms">
+          <div class="service-card__num mono-tag">04</div>
+          <h3 class="service-card__title">Consulting</h3>
+          <p class="service-card__label mono-tag">Strategic Advisory</p>
+          <p class="service-card__text">AI readiness assessments, workflow design, and change management — guiding organizations through thoughtful, sustainable AI transformation.</p>
+          <ul class="service-card__tags">
+            <li>AI Readiness</li>
+            <li>Change Management</li>
+            <li>Workflow Design</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 6: PATHWAYS
+  ═══════════════════════════════════════════════ -->
+  <section id="pathways" class="section section--alt programs">
+    <div class="container">
+      <div class="section__header reveal-up">
+        <span class="mono-tag section__eyebrow">Engagements</span>
+        <h2 class="section__title">Pathways</h2>
+        <p class="section__subtitle">Tailored pathways for every organization's AI journey.</p>
+      </div>
+
+      <div class="programs__grid">
+        <div class="program-card reveal-up" style="--delay: 0ms">
+          <div class="program-card__header">
+            <span class="program-card__type mono-tag">Advisory</span>
+            <h3 class="program-card__title">AI Accelerator</h3>
+          </div>
+          <p class="program-card__text">Bespoke consulting with a customized AI roadmap and weekly check-ins to keep your team moving forward with confidence.</p>
+          <ul class="program-card__list">
+            <li>Bespoke consulting</li>
+            <li>Customized roadmap</li>
+            <li>Weekly check-ins</li>
+          </ul>
+          <div class="program-card__footer">
+            <a href="#contact" class="program-card__cta">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="program-card reveal-up" style="--delay: 100ms">
+          <div class="program-card__header">
+            <span class="program-card__type mono-tag">Intensive</span>
+            <h3 class="program-card__title">AI Bootcamp</h3>
+          </div>
+          <p class="program-card__text">A two-day intensive with hands-on workshops and real-world case studies to rapidly build AI literacy and team confidence.</p>
+          <ul class="program-card__list">
+            <li>Two-day intensive</li>
+            <li>Hands-on workshops</li>
+            <li>Case studies</li>
+          </ul>
+          <div class="program-card__footer">
+            <a href="#contact" class="program-card__cta">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="program-card reveal-up" style="--delay: 200ms">
+          <div class="program-card__header">
+            <span class="program-card__type mono-tag">Private</span>
+            <h3 class="program-card__title">AI Immersion</h3>
+          </div>
+          <p class="program-card__text">Private half-day workshops with custom training and collaborative exercises designed for your team's specific context and challenges.</p>
+          <ul class="program-card__list">
+            <li>Private half-day format</li>
+            <li>Custom training</li>
+            <li>Collaborative exercises</li>
+          </ul>
+          <div class="program-card__footer">
+            <a href="#contact" class="program-card__cta">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="program-card reveal-up" style="--delay: 300ms">
+          <div class="program-card__header">
+            <span class="program-card__type mono-tag">Academic</span>
+            <h3 class="program-card__title">Capstone Projects</h3>
+          </div>
+          <p class="program-card__text">Academic partnerships and pilot projects with measurable outcomes — bridging research and practice in responsible AI deployment.</p>
+          <ul class="program-card__list">
+            <li>Academic partnerships</li>
+            <li>Pilot projects</li>
+            <li>Measurable outcomes</li>
+          </ul>
+          <div class="program-card__footer">
+            <a href="#contact" class="program-card__cta">Inquire →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 7: ABOUT
+  ═══════════════════════════════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about__layout">
+        <div class="about__visual reveal-up">
+          <div class="about__portrait-frame">
+            <div class="about__portrait-inner">
+              <svg class="about__portrait-glyph" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Abstract portrait geometric -->
+                <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                <circle cx="100" cy="75" r="25" fill="currentColor" opacity="0.15"/>
+                <path d="M50 160 Q100 130 150 160" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                <line x1="20" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+                <line x1="100" y1="20" x2="100" y2="180" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+                <circle cx="100" cy="75" r="3" fill="currentColor" opacity="0.7"/>
+                <circle cx="85" cy="78" r="1.5" fill="currentColor" opacity="0.6"/>
+                <circle cx="115" cy="78" r="1.5" fill="currentColor" opacity="0.6"/>
+              </svg>
+              <div class="about__initials">AC</div>
+            </div>
+          </div>
+          <div class="about__affiliation reveal-up" style="--delay: 150ms">
+            <span class="mono-tag">UC Berkeley</span>
+            <span class="about__affiliation-sep">·</span>
+            <span class="mono-tag">Search Inside Yourself</span>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <div class="reveal-up">
+            <span class="mono-tag section__eyebrow">Founder</span>
+            <h2 class="section__title">Aaron Culich</h2>
+            <p class="about__role">Creator of the PEEQ Program &amp; Data Science Director</p>
+          </div>
+
+          <p class="about__bio reveal-up" style="--delay: 100ms">
+            Aaron Culich is the creator of the PEEQ program and Data Science Director at the Eviction Research Network (ERN) at UC Berkeley. He is a Certified Teacher for the Search Inside Yourself program who cares about fostering work environments where people engage in healthy conflict and heart-centered listening to create effective Human-AI teams (HATS) who can perform at their peak and treat one another with dignity and respect in the process.
+          </p>
+
+          <div class="about__links reveal-up" style="--delay: 200ms">
+            <a href="https://cidrlab.org/" target="_blank" rel="noopener noreferrer" class="about__link about__link--cidr">
+              <div class="about__link-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8z" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M2 10h16M10 2c-2 2.5-3 5-3 8s1 5.5 3 8M10 2c2 2.5 3 5 3 8s-1 5.5-3 8" stroke="currentColor" stroke-width="1.2"/>
+                </svg>
+              </div>
+              <div class="about__link-content">
+                <span class="about__link-title">CiDR Lab</span>
+                <span class="about__link-sub">Civic Technology &amp; Data Science Built With Communities</span>
+              </div>
+              <span class="about__link-arrow">↗</span>
+            </a>
+
+            <a href="https://linkedin.com/in/aculich" target="_blank" rel="noopener noreferrer" class="about__link about__link--linkedin">
+              <div class="about__link-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <rect x="2" y="2" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M6 9v5M6 7v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M9 14v-2.5a2 2 0 014 0V14M9 9v5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="about__link-content">
+                <span class="about__link-title">Connect on LinkedIn</span>
+                <span class="about__link-sub">linkedin.com/in/aculich</span>
+              </div>
+              <span class="about__link-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SECTION 8: CONTACT
+  ═══════════════════════════════════════════════ -->
+  <section id="contact" class="section section--alt contact">
+    <div class="container">
+      <div class="contact__inner reveal-up">
+        <span class="mono-tag section__eyebrow">Get Started</span>
+        <h2 class="contact__title">Ready to up-level<br>your work?</h2>
+        <p class="contact__sub">Let's explore what's possible when emotional intelligence and AI work together.</p>
+
+        <form class="contact__form" id="contactForm" action="https://api.staticforms.dev/submit" method="post">
+          <input type="hidden" name="apiKey" value="YOUR_API_KEY">
+          <input type="hidden" name="subject" value="PEEQ.WORK Contact Form">
+          <input type="hidden" name="replyTo" value="@">
+          <input type="hidden" name="redirectTo" value="https://peeq.work/#contact">
+          <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="contact__form-row">
+            <div class="contact__field">
+              <label for="contactName" class="contact__label mono-tag">Name</label>
+              <input type="text" id="contactName" name="name" required class="contact__input" placeholder="Your name">
+            </div>
+            <div class="contact__field">
+              <label for="contactEmail" class="contact__label mono-tag">Email</label>
+              <input type="email" id="contactEmail" name="email" required class="contact__input" placeholder="you@example.com">
+            </div>
+          </div>
+
+          <div class="contact__field">
+            <label for="contactOrg" class="contact__label mono-tag">Organization <span class="contact__optional">(optional)</span></label>
+            <input type="text" id="contactOrg" name="$organization" class="contact__input" placeholder="Your organization">
+          </div>
+
+          <div class="contact__field">
+            <label for="contactMessage" class="contact__label mono-tag">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" required class="contact__textarea" placeholder="Tell us about your team and what you're looking for..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large contact__submit">
+            <span>Send Message</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 16L16 4M16 4H8M16 4v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="footer__logo">
+          <span>PEEQ</span><span class="footer__logo-dot">.</span><span>WORK</span>
+        </a>
+        <p class="footer__tagline">Up-leveling work. Down-regulating anxiety.</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="https://cidrlab.org/" target="_blank" rel="noopener noreferrer" class="footer__link">CiDR Lab ↗</a>
+        <a href="#contact" class="footer__link">Contact</a>
+        <a href="https://linkedin.com/in/aculich" target="_blank" rel="noopener noreferrer" class="footer__link">LinkedIn ↗</a>
+      </div>
+
+      <div class="footer__right">
+        <div class="theme-toggle theme-toggle--footer" id="footerToggle">
+          <button class="theme-dot theme-dot--geometry" data-mirror="geometry" aria-label="Geometry theme"></button>
+          <button class="theme-dot theme-dot--ocean" data-mirror="ocean" aria-label="Ocean theme"></button>
+        </div>
+        <p class="footer__copy mono-tag">© 2026 PEEQ.WORK</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

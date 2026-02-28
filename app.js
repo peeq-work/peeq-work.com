@@ -221,7 +221,6 @@
     const dot = document.getElementById('heroDot');
     const heroSub = document.getElementById('heroSub');
     const triggerZone = document.getElementById('heroTriggerZone');
-    const tensorTooltip = document.getElementById('tensorTooltip');
     if (!dot) return;
 
     // Create particles container on the dot
@@ -244,35 +243,6 @@
     if (heroSub) triggers.push(heroSub);
 
     let isHovering = false;
-
-    // ── Tensor tooltip: 3-second hover timer ──
-    let tensorTimer = null;
-    let tooltipVisible = false;
-
-    function showTensorTooltip() {
-      if (!tensorTooltip) return;
-      tensorTooltip.classList.add('is-visible');
-      tooltipVisible = true;
-    }
-
-    function hideTensorTooltip() {
-      if (!tensorTooltip) return;
-      tensorTooltip.classList.remove('is-visible');
-      tooltipVisible = false;
-    }
-
-    // Start the 3s timer when mouse enters the dot specifically
-    dot.addEventListener('mouseenter', function () {
-      clearTimeout(tensorTimer);
-      tensorTimer = setTimeout(showTensorTooltip, 3000);
-    });
-
-    // Cancel timer and hide tooltip when mouse leaves the dot
-    dot.addEventListener('mouseleave', function () {
-      clearTimeout(tensorTimer);
-      tensorTimer = null;
-      hideTensorTooltip();
-    });
 
     function handleEnter() {
       if (isHovering) return;

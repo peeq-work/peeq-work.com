@@ -85,7 +85,17 @@
         <span class="mono-tag">AI + Emotional Intelligence</span>
       </div>
       <h1 class="hero__title">
-        <span class="hero__title-line1">PEEQ</span><span class="hero__title-dot" id="heroDot">.</span><span class="hero__title-line2">WORK</span>
+        <span class="hero__title-line1">PEEQ</span><span class="hero__title-dot" id="heroDot"><svg class="tensor-glyph" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2.2" fill="none"/><line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <!-- Tensor tooltip (appears after 3s hover on dot) -->
+          <div class="tensor-tooltip" id="tensorTooltip">
+            <div class="tensor-tooltip__icon">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="8.7" y1="8.7" x2="31.3" y2="31.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="31.3" y1="8.7" x2="8.7" y2="31.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <p class="tensor-tooltip__label mono-tag">Tensor →</p>
+            <h3 class="tensor-tooltip__title">Co-creation</h3>
+            <p class="tensor-tooltip__desc">Parallel work, combined capacity — not 1+1 but 1⊗1: a richer object than either alone</p>
+          </div>
+        </span><span class="hero__title-line2">WORK</span>
       </h1>
       <div class="hero__trigger-zone" id="heroTriggerZone">
         <p class="hero__tagline"><span class="hero__tagline-up">Up-leveling work.</span><br class="desktop-br"> Down-regulating anxiety.</p>
@@ -303,6 +313,19 @@
             <li>Workflow Design</li>
           </ul>
         </div>
+
+        <div class="service-card reveal-up" id="paleo" style="--delay: 400ms">
+          <div class="service-card__num mono-tag">05</div>
+          <h3 class="service-card__title">PEEQ PALEO</h3>
+          <p class="service-card__label mono-tag">A Diet for your Meetings</p>
+          <p class="service-card__text">Purpose, Agenda, Logistics, Empathy, Outcomes — a practical meeting diet that cuts empty calories and leaves clear next steps. Upcoming webinar &amp; workshop series; more soon on teaming and building resilient organizations with HATS (Human-AI Teams).</p>
+          <ul class="service-card__tags">
+            <li>Meetings</li>
+            <li>Empathy</li>
+            <li>HATS</li>
+          </ul>
+          <p class="service-card__text" style="margin-top: 0.75rem"><a href="#contact" class="program-card__cta">More details soon — get in touch →</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -377,6 +400,38 @@
             <li>Academic partnerships</li>
             <li>Pilot projects</li>
             <li>Measurable outcomes</li>
+          </ul>
+          <div class="program-card__footer">
+            <a href="#contact" class="program-card__cta">Inquire →</a>
+          </div>
+        </div>
+
+        <div class="program-card reveal-up" style="--delay: 400ms">
+          <div class="program-card__header">
+            <span class="program-card__type mono-tag">Series</span>
+            <h3 class="program-card__title">PEEQ PALEO Workshops</h3>
+          </div>
+          <p class="program-card__text">Upcoming webinar and workshop series: <em>A Diet for your Meetings</em>. Learn PALEO in practice, then go deeper into teaming and organizational resilience with Human-AI Teams. Partner pathways include org-level apprenticeships (e.g. RRID, CRB Nexus).</p>
+          <ul class="program-card__list">
+            <li>Webinar + live workshop</li>
+            <li>Meeting design &amp; empathy</li>
+            <li>HATS / resilience (more soon)</li>
+          </ul>
+          <div class="program-card__footer">
+            <a href="#contact" class="program-card__cta">Express interest →</a>
+          </div>
+        </div>
+
+        <div class="program-card reveal-up" style="--delay: 500ms">
+          <div class="program-card__header">
+            <span class="program-card__type mono-tag">Apprenticeship</span>
+            <h3 class="program-card__title">Team Apprenticeships</h3>
+          </div>
+          <p class="program-card__text">6-week and 18-week team apprenticeship packages for organizations integrating AI with EQ — crude outlines shipping now; details refined with each partner cohort.</p>
+          <ul class="program-card__list">
+            <li>6-week intensive track</li>
+            <li>18-week embedded track</li>
+            <li>Org case studies (RRID, CRB Nexus)</li>
           </ul>
           <div class="program-card__footer">
             <a href="#contact" class="program-card__cta">Inquire →</a>
@@ -474,10 +529,10 @@
         <p class="contact__sub">Let's explore what's possible when emotional intelligence and AI work together.</p>
 
         <form class="contact__form" id="contactForm" action="https://api.staticforms.dev/submit" method="post">
-          <input type="hidden" name="apiKey" value="sf_jngc13bfk3jb66mch2jej1hl">
+          <input type="hidden" name="apiKey" value="YOUR_API_KEY">
           <input type="hidden" name="subject" value="PEEQ.WORK Contact Form">
           <input type="hidden" name="replyTo" value="@">
-          <input type="hidden" name="redirectTo" value="https://peeq-work.com/#contact">
+          <input type="hidden" name="redirectTo" value="https://peeq.work/#contact">
           <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
 
           <div class="contact__form-row">

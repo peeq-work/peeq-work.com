@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════
    PEEQ.WORK — app.js
-   Theme system · Lenis scroll · Animations · Nav
+   Theme system · Native scroll · Animations · Nav
 ═══════════════════════════════════════════════════ */
 
 (function () {
@@ -55,23 +55,6 @@
 
   initTheme();
 
-  // ── LENIS SMOOTH SCROLL ──────────────────────────
-  let lenis;
-
-  function initLenis() {
-    if (typeof Lenis === 'undefined') return;
-    lenis = new Lenis({
-      lerp: 0.085,
-      smoothWheel: true,
-      orientation: 'vertical',
-    });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }
-
   // ── NAVIGATION ──────────────────────────────────
   const nav = document.getElementById('nav');
   let lastScrollY = 0;
@@ -117,12 +100,10 @@
   function openMobileMenu() {
     mobileMenu.classList.add('is-open');
     document.body.style.overflow = 'hidden';
-    if (lenis) lenis.stop();
   }
   function closeMobileMenu() {
     mobileMenu.classList.remove('is-open');
     document.body.style.overflow = '';
-    if (lenis) lenis.start();
   }
 
   hamburger && hamburger.addEventListener('click', openMobileMenu);
@@ -131,7 +112,7 @@
     link.addEventListener('click', closeMobileMenu);
   });
 
-  // ── SMOOTH SCROLL FOR ANCHOR LINKS ──────────────
+  // ── ANCHOR LINKS (native smooth; wheel scroll stays default) ──
   function bindAnchorLinks() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -139,12 +120,8 @@
         const target = document.getElementById(targetId);
         if (!target) return;
         e.preventDefault();
-        if (lenis) {
-          lenis.scrollTo(target, { offset: -80, duration: 1.2 });
-        } else {
-          const offset = target.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({ top: offset, behavior: 'smooth' });
-        }
+        const offset = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: offset, behavior: 'smooth' });
       });
     });
   }
@@ -196,7 +173,6 @@
 
   // ── INIT ON DOM READY ────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
-    initLenis();
     bindAnchorLinks();
     bindThemeToggles();
     initScrollReveal();
